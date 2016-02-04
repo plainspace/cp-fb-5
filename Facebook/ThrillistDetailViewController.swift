@@ -10,6 +10,18 @@ import UIKit
 
 class ThrillistDetailViewController: UIViewController {
     
+    @IBOutlet weak var ThrillistScrollView: UIScrollView!
+    
+    @IBOutlet weak var ThrillistImageView: UIImageView!
+    
+    @IBOutlet weak var BackButton: UIButton!
+    
+    @IBAction func BackButtonAction(sender: AnyObject) {
+        // dismissViewControllerAnimated(true, completion: nil)
+        
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
     @IBAction func LikeButton(sender: UIButton) {
         if sender.selected == false {
             sender.selected = true
@@ -21,6 +33,9 @@ class ThrillistDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ThrillistScrollView.contentSize = ThrillistImageView.image!.size
+        
         func keyboardWillShow(notification: NSNotification!) {
             
         }
