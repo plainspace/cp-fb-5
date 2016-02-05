@@ -1,22 +1,18 @@
 //
-//  CreateStatusViewController.swift
+//  DetailViewController.swift
 //  Facebook
 //
-//  Created by Jared on 2/3/16.
+//  Created by Jared on 2/4/16.
 //  Copyright © 2016 plainspace. All rights reserved.
 //
 
 import UIKit
 
-class CreateStatusViewController: UIViewController {
+class DetailViewController: UIViewController {
 
-    @IBAction func CancelButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 

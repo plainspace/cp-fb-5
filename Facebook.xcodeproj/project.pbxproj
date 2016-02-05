@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F04E5E81C637C32005455A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04E5E71C637C32005455A8 /* DetailViewController.swift */; };
 		7F0680671C62F95200AB20E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0680661C62F95200AB20E9 /* AppDelegate.swift */; };
 		7F0680691C62F95200AB20E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0680681C62F95200AB20E9 /* ViewController.swift */; };
 		7F06806C1C62F95200AB20E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06806A1C62F95200AB20E9 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F04E5E71C637C32005455A8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7F0680631C62F95200AB20E9 /* Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0680661C62F95200AB20E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F0680681C62F95200AB20E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		7F06809E1C62FEFF00AB20E9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7F04E5E71C637C32005455A8 /* DetailViewController.swift */,
 				7F0680A11C630DE100AB20E9 /* CreatePhotoViewController.swift */,
 				7F0680A31C630DE700AB20E9 /* CreateStatusViewController.swift */,
 				7F0680A51C630DED00AB20E9 /* CreateCheckinViewController.swift */,
@@ -297,6 +300,7 @@
 				7F06809D1C62FEE300AB20E9 /* MoreViewController.swift in Sources */,
 				7F0680991C62FEBF00AB20E9 /* MessagesViewController.swift in Sources */,
 				7F0680691C62F95200AB20E9 /* ViewController.swift in Sources */,
+				7F04E5E81C637C32005455A8 /* DetailViewController.swift in Sources */,
 				7F0680671C62F95200AB20E9 /* AppDelegate.swift in Sources */,
 				7F0680A21C630DE100AB20E9 /* CreatePhotoViewController.swift in Sources */,
 				7F06809B1C62FED300AB20E9 /* NotificationsViewController.swift in Sources */,
@@ -529,6 +533,7 @@
 				7F06808D1C62F95200AB20E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F06808E1C62F95200AB20E9 /* Build configuration list for PBXNativeTarget "FacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +542,7 @@
 				7F0680901C62F95200AB20E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F0680911C62F95200AB20E9 /* Build configuration list for PBXNativeTarget "FacebookUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +551,7 @@
 				7F0680931C62F95200AB20E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

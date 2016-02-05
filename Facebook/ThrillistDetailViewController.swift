@@ -16,6 +16,11 @@ class ThrillistDetailViewController: UIViewController {
     
     @IBOutlet weak var BackButton: UIButton!
     
+    @IBOutlet weak var CommentBarParentView: UIView!
+    
+    var initialY: CGFloat!
+    var offset: CGFloat!
+    
     @IBAction func BackButtonAction(sender: AnyObject) {
         // dismissViewControllerAnimated(true, completion: nil)
         
@@ -36,14 +41,23 @@ class ThrillistDetailViewController: UIViewController {
         
         ThrillistScrollView.contentSize = ThrillistImageView.image!.size
         
+        initialY = CommentBarParentView.frame.origin.y
+        
+        offset = -50
+        
         func keyboardWillShow(notification: NSNotification!) {
             
         }
+        
         func keyboardWillHide(notification: NSNotification!) {
             
         }
+        
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object:nil)
+        
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object:nil)
+        
+        
         // Do any additional setup after loading the view.
     }
 
