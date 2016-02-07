@@ -51,6 +51,10 @@ class ThrillistDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let paddingView = UIView(frame: CGRectMake(0, 0, 7, self.TouchCommentField.frame.height))
+        TouchCommentField.leftView = paddingView
+        TouchCommentField.leftViewMode = UITextFieldViewMode.Always
+        
         ThrillistScrollView.contentSize = ThrillistImageView.image!.size
         
         TouchCommentField.becomeFirstResponder()
