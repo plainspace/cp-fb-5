@@ -262,14 +262,14 @@
                                 </subviews>
                             </scrollView>
                             <view contentMode="scaleToFill" id="3dR-fw-I3d">
-                                <rect key="frame" x="0.0" y="520" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="474" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment_bar" id="bBr-yU-Kax">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="SJv-vI-ncu">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" id="SJv-vI-ncu">
                                         <rect key="frame" x="42" y="8" width="212" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -303,6 +303,7 @@
                         <outlet property="CommentBarParentView" destination="3dR-fw-I3d" id="1U2-9p-VNW"/>
                         <outlet property="ThrillistImageView" destination="kSG-Jo-mOU" id="cGK-Tw-LuH"/>
                         <outlet property="ThrillistScrollView" destination="Fbh-VH-Twf" id="Ls1-Gc-BBf"/>
+                        <outlet property="TouchCommentField" destination="SJv-vI-ncu" id="tBF-Wy-vBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1K-qg-BjD" userLabel="First Responder" sceneMemberID="firstResponder"/>

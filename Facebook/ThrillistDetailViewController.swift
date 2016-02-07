@@ -18,8 +18,19 @@ class ThrillistDetailViewController: UIViewController {
     
     @IBOutlet weak var CommentBarParentView: UIView!
     
+    @IBOutlet weak var TouchCommentField: UITextField!
+
     var initialY: CGFloat!
     var offset: CGFloat!
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        
+    }
+    
     
     @IBAction func BackButtonAction(sender: AnyObject) {
         // dismissViewControllerAnimated(true, completion: nil)
@@ -36,22 +47,17 @@ class ThrillistDetailViewController: UIViewController {
         }
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ThrillistScrollView.contentSize = ThrillistImageView.image!.size
         
+        TouchCommentField.becomeFirstResponder()
+        
         initialY = CommentBarParentView.frame.origin.y
         
         offset = -50
-        
-        func keyboardWillShow(notification: NSNotification!) {
-            
-        }
-        
-        func keyboardWillHide(notification: NSNotification!) {
-            
-        }
         
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object:nil)
         
