@@ -18,25 +18,31 @@ class ThrillistDetailViewController: UIViewController {
     
     @IBOutlet weak var CommentBarParentView: UIView!
     
+    @IBOutlet weak var TouchPostButton: UIButton!
+    
+    @IBAction func TouchPostButton(sender: AnyObject) {
+    }
+    
     @IBOutlet weak var TouchCommentField: UITextField!
-
+    
     var initialY: CGFloat!
     var offset: CGFloat!
     
     func keyboardWillShow(notification: NSNotification!) {
-        
+        CommentBarParentView.frame.origin.y = initialY + offset
     }
     
     func keyboardWillHide(notification: NSNotification!) {
-        
+        // TouchPostButton.frame.origin.y = initialY
+        // TouchPostButton.resignFirstResponder()
     }
     
-    
     @IBAction func BackButtonAction(sender: AnyObject) {
-        // dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         
         navigationController?.popViewControllerAnimated(true)
     }
+    
     
     @IBAction func LikeButton(sender: UIButton) {
         if sender.selected == false {
@@ -48,25 +54,33 @@ class ThrillistDetailViewController: UIViewController {
     }
 
 
+    @IBAction func CommentButton(sender: UIButton) {
+        self.TouchCommentField.becomeFirstResponder()
+        print("test")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let paddingView = UIView(frame: CGRectMake(0, 0, 7, self.TouchCommentField.frame.height))
+
         TouchCommentField.leftView = paddingView
+        
         TouchCommentField.leftViewMode = UITextFieldViewMode.Always
         
         ThrillistScrollView.contentSize = ThrillistImageView.image!.size
         
-        TouchCommentField.becomeFirstResponder()
+        // TouchCommentField.becomeFirstResponder()
         
         initialY = CommentBarParentView.frame.origin.y
         
-        offset = -50
+        offset = -204
         
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object:nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object:nil)
         
+        TouchPostButton.resignFirstResponder()
         
         // Do any additional setup after loading the view.
     }
