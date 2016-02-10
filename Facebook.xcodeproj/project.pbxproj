@@ -24,6 +24,8 @@
 		7F0680A21C630DE100AB20E9 /* CreatePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0680A11C630DE100AB20E9 /* CreatePhotoViewController.swift */; };
 		7F0680A41C630DE700AB20E9 /* CreateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0680A31C630DE700AB20E9 /* CreateStatusViewController.swift */; };
 		7F0680A61C630DED00AB20E9 /* CreateCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0680A51C630DED00AB20E9 /* CreateCheckinViewController.swift */; };
+		7FF969821C6B1A5900887A82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969811C6B1A5900887A82 /* LoginViewController.swift */; };
+		7FF969841C6B20D200887A82 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF969831C6B20D200887A82 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		7F0680A11C630DE100AB20E9 /* CreatePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePhotoViewController.swift; sourceTree = "<group>"; };
 		7F0680A31C630DE700AB20E9 /* CreateStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateStatusViewController.swift; sourceTree = "<group>"; };
 		7F0680A51C630DED00AB20E9 /* CreateCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinViewController.swift; sourceTree = "<group>"; };
+		7FF969811C6B1A5900887A82 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FF969831C6B20D200887A82 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		7F0680651C62F95200AB20E9 /* Facebook */ = {
 			isa = PBXGroup;
 			children = (
+				7FF969831C6B20D200887A82 /* Common.swift */,
 				7F0680661C62F95200AB20E9 /* AppDelegate.swift */,
 				7F0680681C62F95200AB20E9 /* ViewController.swift */,
 				7F06806A1C62F95200AB20E9 /* Main.storyboard */,
@@ -149,6 +154,7 @@
 		7F06809E1C62FEFF00AB20E9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7FF969811C6B1A5900887A82 /* LoginViewController.swift */,
 				7F04E5E71C637C32005455A8 /* DetailViewController.swift */,
 				7F0680A11C630DE100AB20E9 /* CreatePhotoViewController.swift */,
 				7F0680A31C630DE700AB20E9 /* CreateStatusViewController.swift */,
@@ -297,11 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF969821C6B1A5900887A82 /* LoginViewController.swift in Sources */,
 				7F06809D1C62FEE300AB20E9 /* MoreViewController.swift in Sources */,
 				7F0680991C62FEBF00AB20E9 /* MessagesViewController.swift in Sources */,
 				7F0680691C62F95200AB20E9 /* ViewController.swift in Sources */,
 				7F04E5E81C637C32005455A8 /* DetailViewController.swift in Sources */,
 				7F0680671C62F95200AB20E9 /* AppDelegate.swift in Sources */,
+				7FF969841C6B20D200887A82 /* Common.swift in Sources */,
 				7F0680A21C630DE100AB20E9 /* CreatePhotoViewController.swift in Sources */,
 				7F06809B1C62FED300AB20E9 /* NotificationsViewController.swift in Sources */,
 				7F0680A61C630DED00AB20E9 /* CreateCheckinViewController.swift in Sources */,
