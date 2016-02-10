@@ -34,7 +34,8 @@ class ThrillistDetailViewController: UIViewController {
     
     func keyboardWillHide(notification: NSNotification!) {
         // TouchPostButton.frame.origin.y = initialY
-        // TouchPostButton.resignFirstResponder()
+        TouchPostButton.resignFirstResponder()
+        CommentBarParentView.frame.origin.y = initialY
     }
     
     @IBAction func BackButtonAction(sender: AnyObject) {
@@ -80,7 +81,7 @@ class ThrillistDetailViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object:nil)
         
-        TouchPostButton.resignFirstResponder()
+        // TouchPostButton.resignFirstResponder()
         
         // Do any additional setup after loading the view.
     }
