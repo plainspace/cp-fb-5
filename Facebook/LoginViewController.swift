@@ -18,18 +18,33 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var LabelParentView: UIView!
     
+    @IBOutlet weak var SignUpLink: UILabel!
+    
     @IBAction func DidTap(sender: AnyObject) {
         view.endEditing(true)
     }
     
-    var initialY: CGFloat!
-    var offset: CGFloat!
+    var initialYLogoView: CGFloat!
+    var offsetLogoView: CGFloat!
+    
+    var initialYFieldParentView: CGFloat!
+    var offsetFieldParentView: CGFloat!
+    
+    var initialYLabelParentView: CGFloat!
+    var offsetLabelParentView: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        initialYLogoView = LogoView.frame.origin.y
+        offsetLogoView = -34
         
-        initialY = FieldParentView.frame.origin.y
-        offset = -50
+        initialYFieldParentView = FieldParentView.frame.origin.y
+        offsetFieldParentView = -70
+        
+        initialYLabelParentView = LabelParentView.frame.origin.y
+        offsetLabelParentView = -234
+        
         // let frame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -39,11 +54,29 @@ class LoginViewController: UIViewController {
     }
     
     func keyboardWillShow(notification: NSNotification!) {
-        FieldParentView.frame.origin.y = initialY + offset
+        LogoView.frame.origin.y = initialYLogoView + offsetLogoView
+
+        FieldParentView.frame.origin.y = initialYFieldParentView + offsetFieldParentView
+
+        LabelParentView.frame.origin.y = initialYLabelParentView + offsetLabelParentView
+        
+        SignUpLink.hidden = true
+        
+        print("move parent views up")
+
     }
     
     func keyboardWillHide(notification: NSNotification!) {
-        FieldParentView.frame.origin.y = initialY
+        LogoView.frame.origin.y = initialYLogoView
+
+        FieldParentView.frame.origin.y = initialYFieldParentView
+
+        LabelParentView.frame.origin.y = initialYLabelParentView
+        
+        SignUpLink.hidden = false
+        
+        print("move parent views down")
+
     }
 
     override func didReceiveMemoryWarning() {
