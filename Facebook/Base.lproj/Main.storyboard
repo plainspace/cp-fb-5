@@ -377,6 +377,8 @@
                                         <state key="selected" image="logging_in_button"/>
                                         <connections>
                                             <action selector="OnButtonPress:" destination="Sds-tx-QvT" eventType="touchUpInside" id="Agt-Dx-UBW"/>
+                                            <action selector="didPressLogin:" destination="Sds-tx-QvT" eventType="touchUpInside" id="cPW-HH-jXP"/>
+                                            <segue destination="qtg-jJ-seS" kind="modal" identifier="LogInSegue" id="K1g-0g-fhM"/>
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="cGt-8I-j4b">
@@ -407,9 +409,12 @@
                     </view>
                     <connections>
                         <outlet property="ActivityIndicator" destination="cGt-8I-j4b" id="EOg-3g-W4K"/>
+                        <outlet property="EmailField" destination="Wd4-EP-bXG" id="oDP-G5-u9k"/>
                         <outlet property="FieldParentView" destination="7p5-Eb-TPl" id="bMh-2e-Gcs"/>
                         <outlet property="LabelParentView" destination="p3O-dg-j5R" id="OWw-AX-Iwo"/>
+                        <outlet property="LoginButton" destination="GZK-X3-4oc" id="9si-FO-xae"/>
                         <outlet property="LogoView" destination="tXj-qp-4jf" id="uC2-sT-XQK"/>
+                        <outlet property="PasswordField" destination="hLv-tT-1eB" id="t2d-zr-SND"/>
                         <outlet property="SignUpLink" destination="Q8f-Xf-Qii" id="VZS-a9-OhC"/>
                     </connections>
                 </viewController>

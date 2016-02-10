@@ -10,11 +10,68 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var LogoView: UIImageView!
     
+    
+    
     @IBOutlet weak var FieldParentView: UIView!
+    
+    @IBOutlet weak var EmailField: UITextField!
+    
+    @IBOutlet weak var PasswordField: UITextField!
+
+    @IBOutlet weak var LoginButton: UIButton!
+    
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+
+    @IBAction func didPressLogin(sender: AnyObject) {
+        
+        ActivityIndicator.startAnimating()
+        
+        LoginButton.selected = true
+        
+        if EmailField.text == "asdf" && PasswordField.text == "asdf" {
+            
+            delay(2, closure: { () -> () in
+                
+                self.ActivityIndicator.stopAnimating()
+                
+                self.LoginButton.selected = false
+                
+                self.performSegueWithIdentifier("LogInSegue", sender: nil)
+            
+            })
+           
+            
+        } else {
+        
+            delay(2, closure: { () -> () in
+            
+                self.ActivityIndicator.stopAnimating()
+                
+                self.LoginButton.selected = false
+            
+            })
+            
+            let alertController = UIAlertController(title: "Access denied", message: "Wrong user name and password", preferredStyle: .Alert)
+            
+            // create a cancel action
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                // handle cancel response here. Doing nothing will dismiss the view.
+            }
+            // add the cancel action to the alertController
+            alertController.addAction(cancelAction)
+            
+            presentViewController(alertController, animated: true) {
+                // optional code for what happens after the alert controller has finished presenting
+            }
+            
+        }
+        
+    }
+
+    
     
     @IBOutlet weak var LabelParentView: UIView!
     
