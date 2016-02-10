@@ -18,9 +18,8 @@ class ThrillistDetailViewController: UIViewController {
     
     @IBOutlet weak var CommentBarParentView: UIView!
     
-    @IBOutlet weak var TouchPostButton: UIButton!
-    
-    @IBAction func TouchPostButton(sender: AnyObject) {
+    @IBAction func DidTap(sender: AnyObject) {
+        view.endEditing(true)
     }
     
     @IBOutlet weak var TouchCommentField: UITextField!
@@ -33,8 +32,6 @@ class ThrillistDetailViewController: UIViewController {
     }
     
     func keyboardWillHide(notification: NSNotification!) {
-        // TouchPostButton.frame.origin.y = initialY
-        TouchPostButton.resignFirstResponder()
         CommentBarParentView.frame.origin.y = initialY
     }
     
@@ -80,9 +77,7 @@ class ThrillistDetailViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object:nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self,selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object:nil)
-        
-        // TouchPostButton.resignFirstResponder()
-        
+                
         // Do any additional setup after loading the view.
     }
 

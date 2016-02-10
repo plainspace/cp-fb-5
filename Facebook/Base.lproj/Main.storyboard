@@ -243,6 +243,10 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="thrillist_detail" id="kSG-Jo-mOU">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1203"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="O5f-rl-AjO" appends="YES" id="bUN-xx-zJw"/>
+                                        </connections>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gWL-ou-AXc" userLabel="Comment">
                                         <rect key="frame" x="117" y="362" width="87" height="30"/>
@@ -284,9 +288,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zqe-ty-80Z">
                                                 <rect key="frame" x="262" y="8" width="50" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="TouchPostButton:" destination="66n-m3-G4V" eventType="touchUpInside" id="jQf-1P-asS"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </view>
@@ -318,6 +319,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1K-qg-BjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="O5f-rl-AjO">
+                    <connections>
+                        <action selector="DidTap:" destination="66n-m3-G4V" id="b7L-qe-ssg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="691" y="771.5"/>
         </scene>
