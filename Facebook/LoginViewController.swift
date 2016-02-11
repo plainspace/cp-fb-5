@@ -117,7 +117,9 @@ class LoginViewController: UIViewController {
 
         LabelParentView.frame.origin.y = initialYLabelParentView + offsetLabelParentView
         
-        SignUpLink.hidden = true
+        // SignUpLink.hidden = true
+        
+        self.SignUpLink.fadeOut()
         
         print("move parent views up")
 
@@ -130,7 +132,14 @@ class LoginViewController: UIViewController {
 
         LabelParentView.frame.origin.y = initialYLabelParentView
         
-        SignUpLink.hidden = false
+        UIView.animateWithDuration(1.5, animations: {
+            self.SignUpLink.alpha = 1.0
+        })
+        
+        // SignUpLink.hidden = false
+
+        self.SignUpLink.fadeIn()
+
         
         print("move parent views down")
 
