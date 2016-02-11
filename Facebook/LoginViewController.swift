@@ -150,6 +150,19 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func editingChanged(sender: AnyObject) {
+        // create a conditional statement: if the username OR password fields are empty than...
+        if EmailField.text!.isEmpty || PasswordField.text!.isEmpty {
+            // set the button state to disabled
+            LoginButton.enabled = false
+            // otherwise
+        } else {
+            // set the button state to enabled
+            LoginButton.enabled = true
+        }
+    }
+    
 
     @IBAction func OnButtonPress(sender: AnyObject) {
         self.ActivityIndicator.startAnimating()
