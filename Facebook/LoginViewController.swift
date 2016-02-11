@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var LogoView: UIImageView!
     
     
-    
     @IBOutlet weak var FieldParentView: UIView!
     
     @IBOutlet weak var EmailField: UITextField!
@@ -22,6 +21,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var PasswordField: UITextField!
 
     @IBOutlet weak var LoginButton: UIButton!
+
+    @IBOutlet weak var LabelParentView: UIView!
+    
+    
+    @IBOutlet weak var SignUpLink: UILabel!
     
     @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
 
@@ -70,12 +74,6 @@ class LoginViewController: UIViewController {
         }
         
     }
-
-    
-    
-    @IBOutlet weak var LabelParentView: UIView!
-    
-    @IBOutlet weak var SignUpLink: UILabel!
     
     @IBAction func DidTap(sender: AnyObject) {
         view.endEditing(true)
