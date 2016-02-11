@@ -14,6 +14,8 @@ class NewsFeedViewController: UIViewController {
     
     @IBOutlet weak var NewsFeedImageView: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,26 @@ class NewsFeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        activityIndicator.startAnimating()
+        
+        NewsFeedImageView.hidden = true
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        delay(2, closure: { () -> () in
+            
+            self.activityIndicator.stopAnimating()
+            
+//            self.NewsFeedImageView.fadeIn()
+            self.NewsFeedImageView.hidden = false
+
+            
+        })
+    }
 
     /*
     // MARK: - Navigation

@@ -110,6 +110,11 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        
+    }
+    
     func keyboardWillShow(notification: NSNotification!) {
         LogoView.frame.origin.y = initialYLogoView + offsetLogoView
 
