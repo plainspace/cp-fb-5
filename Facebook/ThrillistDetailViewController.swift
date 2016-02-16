@@ -36,7 +36,7 @@ class ThrillistDetailViewController: UIViewController {
     }
     
     @IBAction func BackButtonAction(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+//        dismissViewControllerAnimated(true, completion: nil)
         
         navigationController?.popViewControllerAnimated(true)
     }

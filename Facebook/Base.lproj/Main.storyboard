@@ -289,7 +289,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zqe-ty-80Z">
                                                 <rect key="frame" x="262" y="8" width="50" height="30"/>
@@ -322,6 +322,7 @@
                         <outlet property="ThrillistImageView" destination="kSG-Jo-mOU" id="cGK-Tw-LuH"/>
                         <outlet property="ThrillistScrollView" destination="Fbh-VH-Twf" id="Ls1-Gc-BBf"/>
                         <outlet property="TouchCommentField" destination="SJv-vI-ncu" id="tBF-Wy-vBI"/>
+                        <segue destination="PTT-Qp-tQX" kind="push" id="pOo-FG-8KG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1K-qg-BjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +385,6 @@
                                         <connections>
                                             <action selector="OnButtonPress:" destination="Sds-tx-QvT" eventType="touchUpInside" id="Agt-Dx-UBW"/>
                                             <action selector="didPressLogin:" destination="Sds-tx-QvT" eventType="touchUpInside" id="cPW-HH-jXP"/>
-                                            <segue destination="qtg-jJ-seS" kind="modal" identifier="LogInSegue" id="K1g-0g-fhM"/>
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="cGt-8I-j4b">
@@ -428,6 +428,7 @@
                         <outlet property="LogoView" destination="tXj-qp-4jf" id="uC2-sT-XQK"/>
                         <outlet property="PasswordField" destination="hLv-tT-1eB" id="t2d-zr-SND"/>
                         <outlet property="SignUpLink" destination="Q8f-Xf-Qii" id="VZS-a9-OhC"/>
+                        <segue destination="qtg-jJ-seS" kind="modal" identifier="LoginSegue" id="QhT-Gp-ZGT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Jf-Ts-ess" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -661,4 +662,7 @@
         <image name="settings" width="320" height="1800"/>
         <image name="thrillist_detail" width="320" height="1203"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pOo-FG-8KG"/>
+    </inferredMetricsTieBreakers>
 </document>

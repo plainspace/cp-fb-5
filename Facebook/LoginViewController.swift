@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
                 
                 self.LoginButton.selected = false
                 
-                self.performSegueWithIdentifier("LogInSegue", sender: nil)
+                self.performSegueWithIdentifier("LoginSegue", sender: nil)
             
             })
            
