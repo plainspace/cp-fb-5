@@ -54,7 +54,7 @@ class ThrillistDetailViewController: UIViewController {
 
     @IBAction func CommentButton(sender: UIButton) {
         self.TouchCommentField.becomeFirstResponder()
-        print("test")
+        print("test comments")
     }
     
     override func viewDidLoad() {
