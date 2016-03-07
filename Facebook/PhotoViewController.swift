@@ -31,9 +31,9 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.contentSize = CGSize(width: 320, height: 800)
         
-        self.scrollView.minimumZoomScale = 1.0
-
-        self.scrollView.maximumZoomScale = 6.0
+//        self.scrollView.minimumZoomScale = 1.0
+//
+//        self.scrollView.maximumZoomScale = 6.0
     }
     
     @IBAction func didTapDone(sender: AnyObject) {
@@ -62,7 +62,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
 //        let alpha = CGFloat(1 - (offset * 1.25 / 100))
         self.view.backgroundColor = UIColor(white: 0, alpha: alpha)
         
-        if abs(scrollView.contentOffset.y) > 80 {
+        if abs(scrollView.contentOffset.y) > 100 {
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -90,7 +90,7 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidEndDragging(scrollView: UIScrollView,
         willDecelerate decelerate: Bool) {
-            if abs(scrollView.contentOffset.y) < 80 {
+            if abs(scrollView.contentOffset.y) < 40 {
                 UIView.animateKeyframesWithDuration(0.3, delay: 0, options: [], animations: { () -> Void in
                     self.actionButtons.alpha = 1
                     self.doneButton.alpha = 1
