@@ -25,11 +25,10 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         photoImageView.clipsToBounds = true
         
         photoImageView.image = photo
-
         
         self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         
-        scrollView.contentSize = CGSize(width: 320, height: 800)
+        scrollView.contentSize = CGSize(width: 320, height: 569)
         
 //        self.scrollView.minimumZoomScale = 1.0
 //

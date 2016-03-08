@@ -13,7 +13,9 @@ class ImageTransition: BaseTransition {
     override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
     
         // cast away
-        let newsFeedViewController = fromViewController as! NewsFeedViewController
+        let tabBarViewController = fromViewController as! UITabBarController
+        let navigationController = tabBarViewController.selectedViewController as! UINavigationController
+        let newsFeedViewController = navigationController.topViewController as! NewsFeedViewController
         let photoViewController = toViewController as! PhotoViewController
         
         let movingImageView = UIImageView()
@@ -48,10 +50,11 @@ class ImageTransition: BaseTransition {
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
         // cast away
-
-        let newsFeedViewController = toViewController as! NewsFeedViewController
+        let tabBarViewController = toViewController as! UITabBarController
+        let navigationController = tabBarViewController.selectedViewController as! UINavigationController
+        let newsFeedViewController = navigationController.topViewController as! NewsFeedViewController
         let photoViewController = fromViewController as! PhotoViewController
-        
+
         let movingImageView = UIImageView()
         let window = UIApplication.sharedApplication().keyWindow
         let movingImageFrame = window!.convertRect(newsFeedViewController.selectedImageView.frame, fromView: newsFeedViewController.NewsFeedScrollView)
